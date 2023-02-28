@@ -6,13 +6,14 @@ inputEl.addEventListener('blur', checkContentForm);
 console.log(inputEl.dataset.length);
 
 function checkContentForm (event){
-if (event.currentTarget.value >= Number(inputEl.dataset.length)) {
+if (event.currentTarget.value.length === Number(inputEl.dataset.length)) {
     inputEl.classList.add('valid');
+    inputEl.classList.remove('invalid');
  
 } else {
    
   inputEl.classList.add('invalid');
- 
+  inputEl.classList.remove('valid');
 }
 }
 
